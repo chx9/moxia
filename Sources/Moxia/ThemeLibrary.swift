@@ -28,7 +28,7 @@ enum ThemeLibrary {
     }()
 
     static let builtInThemes: [Theme] = [
-        ("moyun", "墨韵"), ("sujian", "素笺"), ("qingkong", "晴空"), ("shiguang", "拾光"), ("gelv", "格律"), ("jiaotang", "焦糖"), ("shiping", "时评"), ("manfu", "慢富"),
+        ("moyun", "墨韵"), ("sujian", "素笺"), ("qingkong", "晴空"), ("shiguang", "拾光"), ("gelv", "格律"), ("jiaotang", "焦糖"), ("shiping", "时评"), ("senyu", "森屿"),
     ].map { Theme(id: $0.0, name: $0.1, url: rendererURL.appendingPathComponent("themes/\($0.0).css")) }
 
     static let codeThemes: [Theme] = [
