@@ -1,0 +1,80 @@
+/*
+ * 慢富：「慢慢变富」品牌主题，取自 brand-style.html 的文章内页
+ * 森林绿 #254D3C · 奶油白 #F7F3EA · 焦糖金 #B58A54 · 咖啡棕 #463D35 · 陶土橘 #C87955
+ * 浅绿 #E8EDE4 · 浅棕 #EAE3D5；标题思源宋体，正文思源黑体，数字 DIN
+ */
+#moxia {
+  --accent: #254D3C;
+  --accent-soft: #E8EDE4;
+  color: #463D35;
+  font-family: "Source Han Sans SC", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  line-height: 1.85;
+  letter-spacing: 0.3px;
+  text-align: justify;
+  padding: 22px 18px 26px;
+  border-radius: 12px;
+  background: #F7F3EA;
+}
+#moxia p { margin: 13px 0; }
+
+/* 栏目标签与文末署名（front matter 的 label / footer） */
+#moxia .eyebrow { margin: 0 0 4px; font-size: 12px; font-weight: bold; line-height: 1.6; letter-spacing: 2px; color: #B58A54; }
+#moxia .brand-footer {
+  margin: 34px 0 0; padding: 18px 0 2px; border-top: 1px solid #EAE3D5;
+  font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", serif;
+  font-size: 14px; letter-spacing: 2px; text-align: center; color: #B58A54;
+}
+
+/* 标题：思源宋体 */
+#moxia h1, #moxia h2, #moxia h3 { font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", "STSong", serif; color: #254D3C; }
+#moxia h1 { margin: 5px 0 20px; font-size: 24px; font-weight: bold; line-height: 1.4; letter-spacing: 0.5px; text-align: left; }
+#moxia h2 { margin: 30px 0 13px; padding-left: 11px; border-left: 4px solid #B58A54; font-size: 19px; line-height: 1.4; }
+#moxia h3 { margin: 24px 0 10px; font-size: 17px; line-height: 1.4; }
+#moxia h4, #moxia h5, #moxia h6 { margin: 20px 0 8px; font-size: 15px; color: #B58A54; }
+
+#moxia strong { color: #254D3C; }
+#moxia em { font-style: normal; font-weight: bold; color: #B58A54; }
+#moxia a { color: #254D3C; border-bottom: 1px solid #B58A54; }
+#moxia ul, #moxia ol { margin: 13px 0; padding-left: 1.4em; }
+#moxia li { margin: 4px 0; }
+
+/* 核心观点卡片 */
+#moxia blockquote { margin: 20px 0; padding: 15px 17px; border-left: 0; border-radius: 10px; font-weight: 600; line-height: 1.8; color: #254D3C; background: #EAE3D5; }
+#moxia blockquote p { margin: 4px 0; }
+
+/* 提示框：> [!TIP] 等为重点提示，> [!WARNING] / [!CAUTION] 为风险提醒 */
+#moxia .callout { margin: 20px 0; padding: 15px 17px; border-radius: 10px; line-height: 1.8; color: #254D3C; background: #E8EDE4; }
+#moxia .callout p { margin: 4px 0; }
+#moxia .callout-title { margin: 0 0 2px; font-weight: bold; color: #254D3C; }
+#moxia .callout-warning, #moxia .callout-caution { color: #9C543D; background: #F5E9E2; }
+#moxia .callout-warning .callout-title, #moxia .callout-caution .callout-title { color: #9C543D; }
+#moxia .callout-warning strong, #moxia .callout-caution strong { color: #9C543D; }
+
+/* 数据卡片 */
+#moxia .data-cards { margin: 18px -4px; }
+#moxia .data-card { min-width: 0; margin: 4px; padding: 12px 10px; border-radius: 12px; background: #FFFFFF; }
+#moxia .data-label, #moxia .data-note { font-size: 12px; color: #887B6E; }
+#moxia .data-value { margin: 2px 0; font-size: 21px; letter-spacing: 0; color: #254D3C; }
+
+/* 柱状图：绿金交替 */
+#moxia .bar-chart { margin: 20px 0; padding: 17px 14px 12px; border-radius: 12px; background: #FFFFFF; }
+#moxia .chart-title { margin: 0 0 11px; font-size: 14px; color: #254D3C; }
+#moxia .bar-col { margin: 0 5px; }
+#moxia .bar { width: 100%; border-radius: 5px 5px 0 0; background: #254D3C; }
+#moxia .bar-col:nth-child(even) .bar { background: #B58A54; }
+#moxia .bar-value { font-family: "DIN Alternate", Arial, sans-serif; font-size: 12px; color: #463D35; }
+#moxia .bar-label, #moxia .chart-note { font-size: 12px; color: #887B6E; }
+
+#moxia :not(pre) > code { color: #254D3C; background: #E8EDE4; }
+#moxia img { border-radius: 12px; }
+#moxia figure { margin: 20px 0; }
+#moxia figcaption { font-size: 12px; color: #887B6E; }
+#moxia hr { width: 40px; height: 2px; margin: 30px auto; border: 0; background: #B58A54; }
+#moxia .table-wrap { margin: 20px 0; border-radius: 12px; background: #FFFFFF; }
+#moxia table { font-size: 13px; line-height: 1.7; }
+#moxia th { border: 0; text-align: left; color: #F7F3EA; background: #254D3C; }
+#moxia td { border: 0; border-bottom: 1px solid #EAE3D5; }
+#moxia .fn-ref { color: #B58A54; }
+#moxia .footnotes { border-top: 1px solid #EAE3D5; color: #887B6E; }
+#moxia .footnotes-title { color: #463D35; }

@@ -1,0 +1,39 @@
+/* 焦糖：奶油白底、深棕正文、焦糖色点缀，温润醇厚，适合咖啡、美食与生活随笔 */
+#moxia {
+  --accent: #b8692e;
+  --accent-mark: #f3dcc0;
+  color: #4a3428;
+  font-size: 16px;
+  line-height: 1.85;
+  letter-spacing: 0.3px;
+  text-align: justify;
+  padding: 24px 20px;
+  border-radius: 8px;
+  background-color: #fbf6ec;
+}
+#moxia p { margin: 1.1em 0; }
+#moxia h1 {
+  margin: 0.6em 0 1.4em;
+  padding: 14px 12px;
+  border-radius: 6px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fbf6ec;
+  background: #4a2f22;
+}
+#moxia h2 { margin: 2.2em 0 1em; font-size: 19px; color: #3b261c; }
+#moxia h2 .title { padding: 2px 12px; border-radius: 4px; color: #fbf6ec; background: var(--accent); }
+#moxia h3 { font-size: 17px; color: var(--accent); }
+#moxia h3 .title { padding-left: 9px; border-left: 3px solid var(--accent); }
+#moxia h4 { color: #5c4033; }
+#moxia strong { padding: 0 2px; color: #3b261c; background: linear-gradient(transparent 60%, var(--accent-mark) 60%); }
+#moxia a { color: var(--accent); border-bottom: 1px solid var(--accent-mark); }
+#moxia blockquote { padding: 0.9em 1.1em; border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0; color: #7a5f4e; background: #f3e9da; }
+#moxia figcaption { color: #a68d7a; }
+#moxia :not(pre) > code { color: #9c5420; background: #f3e6d4; }
+#moxia img { border-radius: 6px; }
+#moxia hr { height: 0; margin: 2.6em 0; border-top: 1px dashed #d9c2a8; background: none; }
+#moxia th { color: #fbf6ec; background: #5c4033; }
+#moxia th, #moxia td { border-color: #e6d6c2; }
+#moxia .footnotes { border-top-color: #e6d6c2; color: #8a7262; }

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root { color-scheme: light dark; }
+    html, body { height: 100%; margin: 0; overflow: hidden; background: #f4f4f2; }
+    #scroller { box-sizing: border-box; height: 100%; padding: 28px 0 48px; overflow-y: auto; }
+    /* 只有正文卡片可选中，避免选区蔓延到四周的空白区域 */
+    html, body { -webkit-user-select: none; user-select: none; cursor: default; }
+    #stage {
+      -webkit-user-select: text;
+      user-select: text;
+      cursor: auto;
+      position: relative; /* 成为选区根，WebKit 的选区填充不会越过卡片边缘 */
+      box-sizing: border-box;
+      width: 390px;
+      min-height: calc(100vh - 76px);
+      margin: 0 auto;
+      padding: 22px 18px 40px;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 8px 28px rgba(0, 0, 0, .06);
+    }
+    /* 隐藏原生滚动条，改用自绘的细窄滑块（与编辑器一致：无轨道、滚动时浮现） */
+    #scroller { scrollbar-width: none; }
+    #stage * { scrollbar-width: thin; scrollbar-color: rgba(127, 127, 127, .3) transparent; }
+    #thumb {
+      position: fixed; top: 0; right: 3px; width: 6px; border-radius: 3px;
+      background: rgba(0, 0, 0, .18); opacity: 0; transition: opacity .35s ease, width .15s ease, right .15s ease;
+    }
+    #thumb.visible { opacity: 1; transition-duration: .1s, .15s, .15s; }
+    #thumb:hover, #thumb.dragging { right: 2px; width: 8px; border-radius: 4px; background: rgba(0, 0, 0, .3); opacity: 1; }
+    @media (prefers-color-scheme: dark) {
+      html, body { background: #1e1e1f; }
+      #stage { box-shadow: 0 0 0 1px rgba(255, 255, 255, .06), 0 8px 28px rgba(0, 0, 0, .4); }
+      #thumb { background: rgba(255, 255, 255, .22); }
+      #thumb:hover, #thumb.dragging { background: rgba(255, 255, 255, .35); }
+    }
+  </style>
+  <script src="vendor/markdown-it.min.js"></script>
+  <script src="vendor/highlight.min.js"></script>
+</head>
+<body>
+  <div id="scroller"><div id="stage"></div></div>
+  <script src="moxia.js"></script>
+  <div id="thumb"></div>
+  <script>
+    (() => {
+      const scroller = document.getElementById('scroller')
+      const thumb = document.getElementById('thumb')
+      const inset = 3
+      let hideTimer
+
+      function update() {
+        const { scrollTop, scrollHeight, clientHeight } = scroller
+        if (scrollHeight <= clientHeight) {
+          thumb.style.display = 'none'
+          return
+        }
+        const track = clientHeight - inset * 2
+        const height = Math.max(32, track * clientHeight / scrollHeight)
+        const top = inset + (track - height) * scrollTop / (scrollHeight - clientHeight)
+        thumb.style.display = 'block'
+        thumb.style.height = height + 'px'
+        thumb.style.transform = `translateY(${top}px)`
+      }
+
+      function reveal() {
+        update()
+        thumb.classList.add('visible')
+        clearTimeout(hideTimer)
+        hideTimer = setTimeout(() => thumb.classList.remove('visible'), 900)
+      }
+
+      // ⌘A 只选中正文，而非整个页面
+      document.addEventListener('keydown', (event) => {
+        if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'a') {
+          event.preventDefault()
+          window.getSelection().selectAllChildren(document.getElementById('stage'))
+        }
+      })
+
+      scroller.addEventListener('scroll', reveal, { passive: true })
+      new ResizeObserver(update).observe(document.getElementById('stage'))
+      window.addEventListener('resize', update)
+
+      thumb.addEventListener('mousedown', (event) => {
+        event.preventDefault()
+        const startY = event.clientY
+        const startTop = scroller.scrollTop
+        const ratio = (scroller.scrollHeight - scroller.clientHeight) /
+          (scroller.clientHeight - inset * 2 - thumb.offsetHeight)
+        thumb.classList.add('dragging')
+        const move = (e) => { scroller.scrollTop = startTop + (e.clientY - startY) * ratio }
+        const up = () => {
+          thumb.classList.remove('dragging')
+          window.removeEventListener('mousemove', move)
+          window.removeEventListener('mouseup', up)
+        }
+        window.addEventListener('mousemove', move)
+        window.addEventListener('mouseup', up)
+      })
+    })()
+  </script>
+</body>
+</html>

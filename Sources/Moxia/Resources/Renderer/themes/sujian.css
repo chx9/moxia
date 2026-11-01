@@ -1,0 +1,11 @@
+/* 素笺：克制、留白，适合大多数文章 */
+#moxia { --accent: #1f7a6b; color: #3a3a3a; letter-spacing: 0.3px; }
+#moxia p { margin: 1.1em 0; }
+#moxia h1 { margin-top: 0.6em; font-size: 23px; text-align: center; color: #222; }
+#moxia h2 { margin-top: 2.2em; text-align: center; font-size: 19px; color: #222; }
+#moxia h2 .title { display: inline-block; padding: 0 2px 6px; border-bottom: 2px solid var(--accent); }
+#moxia h3 { font-size: 17px; color: var(--accent); }
+#moxia h4 { color: #555; }
+#moxia strong { color: #222; }
+#moxia blockquote { border-left: 3px solid var(--accent-light); color: #888; }
+#moxia hr { width: 48px; height: 2px; margin: 2.6em auto; background: var(--accent-light); }

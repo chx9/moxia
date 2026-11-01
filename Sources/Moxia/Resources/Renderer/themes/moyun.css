@@ -1,0 +1,39 @@
+/* 墨韵：宋体衬线、朱砂点缀，适合人文随笔 */
+#moxia {
+  --accent: #a8402f;
+  color: #3b3632;
+  font-family: "Songti SC", "Noto Serif SC", "Source Han Serif SC", "STSong", serif;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.5px;
+  text-align: justify;
+  padding: 26px 22px;
+  border-radius: 6px;
+  background-color: #fdfbf5;
+  background-image:
+    repeating-linear-gradient(to right, rgba(120, 112, 92, 0.05) 0 1px, transparent 1px 20px),
+    repeating-linear-gradient(to bottom, rgba(120, 112, 92, 0.05) 0 1px, transparent 1px 20px);
+}
+#moxia p { margin: 1.2em 0; }
+#moxia h1 {
+  margin: 0.8em 0 1.4em;
+  padding: 14px 12px;
+  border-radius: 4px;
+  font-size: 23px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #4a7355;
+  background: #eaf4e9;
+}
+#moxia h1 .title { padding: 0; border-left: 0; }
+#moxia h2 { margin: 2.2em 0 1em; font-size: 20px; letter-spacing: 1px; color: var(--accent); }
+#moxia h2 .title { padding-left: 11px; border-left: 3px solid var(--accent); }
+#moxia h3 { font-size: 17px; color: var(--accent); }
+#moxia h3 .title { padding-left: 10px; border-left: 2px solid var(--accent); }
+#moxia h4 { font-weight: normal; color: var(--accent); }
+#moxia strong { color: var(--accent); }
+#moxia blockquote { margin: 1.6em 0; padding: 1em 1.2em; border-left: 0; border-radius: 2px; background: #f7f4ef; color: #6b625a; }
+#moxia figcaption { font-style: italic; color: #a09890; }
+#moxia :not(pre) > code { color: var(--accent); background: #f7f1ea; }
+#moxia hr { width: 6px; height: 6px; margin: 2.6em auto; border-radius: 3px; background: var(--accent); }
+#moxia th { background: #f7f4ef; }

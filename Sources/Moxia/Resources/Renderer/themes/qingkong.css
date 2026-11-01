@@ -1,0 +1,13 @@
+/* 晴空：明快的蓝，适合技术与产品文章 */
+#moxia { --accent: #2f6fde; color: #333; font-size: 15px; line-height: 1.8; }
+#moxia h1 { margin-top: 0.6em; font-size: 22px; color: #1d2a3d; }
+#moxia h2 { margin-top: 2.2em; font-size: 17px; }
+#moxia h2 .title { display: inline-block; padding: 4px 12px; border-radius: 4px; color: #fff; background: var(--accent); }
+#moxia h3 { font-size: 16px; color: #1d2a3d; }
+#moxia h3 .title { padding-left: 8px; border-left: 4px solid var(--accent); }
+#moxia h4 { color: var(--accent); }
+#moxia strong { color: var(--accent); }
+#moxia a { border-bottom: 1px solid var(--accent-light); }
+#moxia blockquote { padding: 0.8em 1em; border-left: 4px solid var(--accent); border-radius: 0 6px 6px 0; color: #4a5568; background: var(--accent-soft); }
+#moxia th { color: #1d2a3d; background: var(--accent-soft); }
+#moxia hr { background: var(--accent-light); }

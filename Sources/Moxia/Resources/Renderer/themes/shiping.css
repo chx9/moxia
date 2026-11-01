@@ -1,0 +1,60 @@
+/* 时评：黑白报刊版式配中国红，标题衬线、观点醒目，适合股市分析、财经热点与政策解读 */
+#moxia {
+  --accent: #c8161d;
+  color: #1a1a1a;
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  text-align: justify;
+}
+#moxia p { margin: 1em 0; }
+#moxia h1 {
+  margin: 0.4em 0 1.4em;
+  padding: 12px 0 14px;
+  border-top: 8px solid var(--accent);
+  border-bottom: 1px solid #1a1a1a;
+  font-family: Georgia, "Songti SC", "Noto Serif SC", "Source Han Serif SC", serif;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 1.3;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+#moxia h2 { margin: 2.4em 0 1em; padding-bottom: 6px; border-bottom: 2px solid #111; font-size: 18px; line-height: 1.4; color: #111; }
+#moxia h2 .title { display: inline-block; padding: 3px 12px; color: #fff; background: var(--accent); }
+#moxia h3 {
+  margin: 2em 0 0.7em;
+  font-family: Georgia, "Songti SC", "Noto Serif SC", serif;
+  font-size: 17px;
+  font-weight: 900;
+  color: #111;
+}
+#moxia h3 .title { padding-left: 9px; border-left: 5px solid var(--accent); }
+#moxia h4 { font-size: 15px; color: var(--accent); }
+#moxia strong { color: var(--accent); }
+#moxia em { font-style: normal; border-bottom: 2px solid #111; }
+#moxia a { color: var(--accent); border-bottom: 1px solid var(--accent); }
+#moxia ul, #moxia ol { padding-left: 1.4em; }
+#moxia blockquote {
+  margin: 2em 0;
+  padding: 0.6em 0 0.6em 16px;
+  border-left: 6px solid var(--accent);
+  font-family: Georgia, "Songti SC", "Noto Serif SC", serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.65;
+  color: #111;
+}
+#moxia blockquote p { margin: 0.3em 0; }
+#moxia :not(pre) > code { border-radius: 2px; color: var(--accent); background: #f3f3f3; }
+#moxia pre { border-radius: 2px; }
+#moxia img { border-radius: 0; }
+#moxia figcaption { padding-top: 6px; border-top: 1px solid #ddd; font-size: 12px; text-align: left; color: #666; }
+#moxia hr { width: 48px; height: 5px; margin: 2.6em 0; background: var(--accent); }
+#moxia table { font-size: 13px; }
+#moxia th { border: 0; color: #fff; background: #111; text-align: left; }
+#moxia td { border: 0; border-bottom: 1px solid #ddd; }
+#moxia tr:nth-child(even) td { background: #f7f7f7; }
+#moxia .footnotes { border-top: 3px solid #111; }
+#moxia .fn-ref { color: var(--accent); }

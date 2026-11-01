@@ -1,0 +1,12 @@
+/* 拾光：暖橙荧光笔，适合生活与读书笔记 */
+#moxia { --accent: #e07b2a; --accent-mark: #fde3c7; color: #3d3833; line-height: 1.85; }
+#moxia h1 { margin-top: 0.6em; font-size: 22px; text-align: center; color: #2e2924; }
+#moxia h2 { margin-top: 2.2em; font-size: 19px; color: #2e2924; }
+#moxia h2 .title { padding: 0 4px; background: linear-gradient(transparent 58%, var(--accent-mark) 58%); }
+#moxia h3 { font-size: 17px; color: var(--accent); }
+#moxia strong { padding: 0 2px; color: #2e2924; background: linear-gradient(transparent 60%, var(--accent-mark) 60%); }
+#moxia blockquote { padding: 0.8em 1.1em; border-left: 0; border-radius: 8px; color: #7a6e63; background: #fbf6f0; }
+#moxia :not(pre) > code { color: #c4621a; background: #fdf1e6; }
+#moxia img { border-radius: 8px; }
+#moxia hr { height: 0; border-top: 1px dashed #e8d9c8; background: none; }
+#moxia th { background: #fbf6f0; }
