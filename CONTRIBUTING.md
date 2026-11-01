@@ -87,7 +87,7 @@ PR 可能会被要求补充测试或调整实现；讨论时请保持耐心。
 主题是最容易参与的部分：
 
 1. 在 `Sources/Moxia/Resources/Renderer/themes/` 新建 CSS，或在应用的主题文件夹中试写。
-2. 遵循 README 中[自定义主题](README.md#自定义主题)的规则。
+2. 遵循[主题文档](docs/themes.md#编写主题)中的规则。
 3. 如果要成为内置主题，请同时修改 `ThemeLibrary.swift` 中的 `builtInThemes`。
 4. 在 PR 中附上至少一张预览截图，并说明适合的文章类型。
 
