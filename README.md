@@ -15,7 +15,7 @@ It is local-first: no account, no cloud, no telemetry. Rendering happens entirel
 
 > 当前为 0.1.0 早期版本，主题格式与设置项可能调整。
 
-## 为什么是墨匣
+## 墨匣解决什么问题
 
 公众号编辑器不是浏览器：它会丢弃 `<style>` 与 class、过滤外链、折叠代码空白，也读不到本机图片。墨匣在复制前把主题样式逐条内联、把外链收进文末脚注、保留代码空白，并把公式渲染为 SVG，因此粘进去的排版更接近预览。
 
